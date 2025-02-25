@@ -137,7 +137,7 @@ class TSC2004:
 
     @property
     def touched(self):
-        touching = self._read_register(_TSC2004_REG_CFR0) & (CFR0_PENMODE | CFR0_STATUS)
+        touching = self._read_register(_TSC2004_REG_CFR0) & CFR0_PENMODE
         return touching != 0
 
     @property
